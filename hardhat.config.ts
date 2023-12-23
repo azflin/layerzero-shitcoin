@@ -1,6 +1,8 @@
+require('dotenv').config()
 import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
-require('dotenv').config()
+import "@nomicfoundation/hardhat-verify";
+
 
 const config: HardhatUserConfig = {
   solidity: "0.8.19",
@@ -12,6 +14,12 @@ const config: HardhatUserConfig = {
     fantom_testnet: {
       url: 'https://fantom.api.onfinality.io/public',
       accounts: [process.env.DEPLOYER_PK!]
+    }
+  },
+  etherscan: {
+    apiKey: {
+      goerli: process.env.GOERLI_API_KEY!,
+      ftmTestnet: process.env.FANTOM_API_KEY!
     }
   }
 };
