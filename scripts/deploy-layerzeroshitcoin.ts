@@ -6,12 +6,16 @@ async function main() {
   const lzEndpointGoerli = '0xbfD2135BFfbb0B5378b56643c2Df8a87552Bfa23';
   const lzEndPointFantomTestnet = '0x7dcAD72640F835B0FA36EFD3D6d3ec902C7E5acf';
 
-
-  const lzShitcoin = await ethers.deployContract("LayerZeroShitcoin", [name, symbol, lzEndPointFantomTestnet]);
-  await lzShitcoin.waitForDeployment();
-
+  const lzShitcoinGoerli = await ethers.deployContract("LayerZeroShitcoin", [name, symbol, lzEndpointGoerli]);
+  await lzShitcoinGoerli.waitForDeployment();
   console.log(
-    `lzShitcoin deployed to ${lzShitcoin.target}`
+    `lzShitcoin deployed to ${lzShitcoinGoerli.target}`
+  );
+
+  const lzShitcoinFantomTestnet = await ethers.deployContract("LayerZeroShitcoin", [name, symbol, lzEndPointFantomTestnet]);
+  await lzShitcoinFantomTestnet.waitForDeployment();
+  console.log(
+    `lzShitcoin deployed to ${lzShitcoinFantomTestnet.target}`
   );
 }
 
