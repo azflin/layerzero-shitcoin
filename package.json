@@ -22,5 +22,8 @@
     "ts-node": "^10.9.2",
     "typechain": "^8.3.0",
     "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@layerzerolabs/solidity-examples": "^1.1.0"
   }
 }
