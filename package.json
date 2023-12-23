@@ -8,7 +8,7 @@
     "@nomicfoundation/hardhat-ethers": "^3.0.0",
     "@nomicfoundation/hardhat-network-helpers": "^1.0.0",
     "@nomicfoundation/hardhat-toolbox": "^4.0.0",
-    "@nomicfoundation/hardhat-verify": "^2.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.3",
     "@typechain/ethers-v6": "^0.5.0",
     "@typechain/hardhat": "^9.0.0",
     "@types/chai": "^4.2.0",
@@ -24,6 +24,7 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "@layerzerolabs/solidity-examples": "^1.1.0"
+    "@layerzerolabs/solidity-examples": "^1.1.0",
+    "dotenv": "^16.3.1"
   }
 }
