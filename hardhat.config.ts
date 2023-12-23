@@ -12,7 +12,7 @@ const config: HardhatUserConfig = {
       accounts: [process.env.DEPLOYER_PK!]
     },
     fantom_testnet: {
-      url: 'https://fantom.api.onfinality.io/public',
+      url: 'https://rpc.ankr.com/fantom_testnet',
       accounts: [process.env.DEPLOYER_PK!]
     }
   },

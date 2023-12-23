@@ -7,7 +7,7 @@ async function main() {
   const lzEndPointFantomTestnet = '0x7dcAD72640F835B0FA36EFD3D6d3ec902C7E5acf';
 
 
-  const lzShitcoin = await ethers.deployContract("LayerZeroShitcoin", [name, symbol, lzEndpointGoerli]);
+  const lzShitcoin = await ethers.deployContract("LayerZeroShitcoin", [name, symbol, lzEndPointFantomTestnet]);
   await lzShitcoin.waitForDeployment();
 
   console.log(
