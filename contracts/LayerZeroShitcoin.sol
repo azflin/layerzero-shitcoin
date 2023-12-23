@@ -7,11 +7,15 @@ import "@layerzerolabs/solidity-examples/contracts/token/oft/v1/interfaces/IOFT.
 pragma solidity ^0.8.0;
 
 contract LayerZeroShitcoin is OFTCore, ERC20, IOFT {
+    uint256 _totalSupply = 10_000_000 * 1e18;
+
     constructor(
         string memory _name,
         string memory _symbol,
         address _lzEndpoint
-    ) ERC20(_name, _symbol) OFTCore(_lzEndpoint) {}
+    ) ERC20(_name, _symbol) OFTCore(_lzEndpoint) {
+        _mint(msg.sender, _totalSupply);
+    }
 
     function supportsInterface(bytes4 interfaceId) public view virtual override(OFTCore, IERC165) returns (bool) {
         return interfaceId == type(IOFT).interfaceId || interfaceId == type(IERC20).interfaceId || super.supportsInterface(interfaceId);
